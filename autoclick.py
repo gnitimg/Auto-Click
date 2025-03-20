@@ -9,16 +9,15 @@ class AutoClickerApp:
     def __init__(self, root):
         self.root = root
         self.root.title("连点器")
-        self.root.geometry("450x350")  # 扩展界面大小
-        self.root.resizable(False, False)  # 禁止调整窗口大小
+        self.root.geometry("450x350") 
+        self.root.resizable(False, False)
 
-        self.mode = None  # 单点或多点模式
-        self.points = []  # 存储选择的点位
-        self.click_count = 0  # 连点次数
-        self.click_interval = 0.1  # 默认点击间隔时间
-        self.running = False  # 是否正在运行
-        self.stop_triggered = False  # 用于防止多次弹出提示框
-
+        self.mode = None
+        self.points = []
+        self.click_count = 0
+        self.click_interval = 0.1
+        self.running = False
+        self.stop_triggered = False
         self.create_widgets()
 
     def create_widgets(self):
